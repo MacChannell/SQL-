@@ -1,2 +1,60 @@
 # SQL-
 All SQL Scripts Created to Build Resume
+
+"Welcome to my SQL portfolio! This code repository contains examples of SQL I've written. Feel free to take a look and reach out if you have any questions."
+
+Create Table Store
+( id integer PRIMARY KEY, NAME TEXT, COLOR TEXT, INSTOCK INTEGER, PRICE INTEGER);
+
+INSERT INTO STORE VALUES
+(1,"BIKE","RED",15,100);
+INSERT INTO STORE VALUES
+(2,"BIKE","Green",20,110);
+INSERT INTO STORE VALUES
+(3,"BIKE","Purple",30,115);
+INSERT INTO STORE VALUES
+(4,"BIKE","Pink",20,115);
+INSERT INTO STORE VALUES
+(5,"BIKE","Tan",40,90);
+INSERT INTO STORE VALUES
+(6,"BIKE","Teal",8,90);
+INSERT INTO STORE VALUES
+(7,"BIKE","Black",17,111);
+INSERT INTO STORE VALUES
+(8,"BIKE","Blue",11,130);
+INSERT INTO STORE VALUES
+(9,"BIKE","Baby_Blue",15,160);
+INSERT INTO STORE VALUES
+(10,"BIKE","Baby_Pink",18,190);
+INSERT INTO STORE VALUES
+(11,"BIKE","Black_W_Flames",20,210);
+INSERT INTO STORE VALUES
+(12,"BIKE","Halo_Themed",4,300);
+INSERT INTO STORE VALUES
+(13,"BIKE","Bat_Man_Themed",3,315);
+INSERT INTO STORE VALUES
+(14,"BIKE","Cat_Woman_Themed",2,315);
+INSERT INTO STORE VALUES
+(15,"BIKE","Super_Man-Themed",4,400);
+
+--Display Data--
+Select *
+From Store;
+
+--What is Avg Price of Items--
+Select AVG(PRICE) "Average_BIKE_PRICE"
+From Store;
+
+----MOST IN STOCK ITEMS LISTED--
+
+SELECT COLOR,PRICE, INSTOCK
+FROM STORE
+ORDER BY INSTOCK DESC
+LIMIT 5;
+
+----- MOST EXPENSIVE ITEMS LISTED--
+
+SELECT COLOR,PRICE, INSTOCK
+FROM STORE
+ORDER BY PRICE DESC
+LIMIT 5;
